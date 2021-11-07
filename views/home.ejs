@@ -1,0 +1,124 @@
+<%- include("header") -%>
+
+
+        <div class="hero">
+        <div class="navbar">
+           <h3 id="h">ChemWeb</h3>
+            <nav  class="navbare">
+                <a href="#" id="menu"  onclick="menu()" ><i class="fa fa-bars" aria-hidden="true" id="bar"></i></a>
+
+
+
+
+                 <ul class="nav-list" id="hoo" >
+
+                    <li class="nav-item"><a href="/AnikeshRupchandani" class="nav-link">ANIKESH</a></li>
+                    <li class="nav-item"><a href="/AyushTiwari" class="nav-link">AYUSH</a></li>
+                    <li class="nav-item"><a href="/PriyanshiParida" class="nav-link">PRIYANSHI</a></li>
+                    <li class="nav-item"><a href="/UtkarshPratapSingh" class="nav-link">UTKARSH</a></li>
+                    <li class="nav-item"><a href="/VaddadiJayaKumar" class="nav-link">JAYA</a></li>
+
+                 </ul>
+            </nav>
+
+        </div>
+        <div class="content">
+            <small>Welcome to our</small>
+            <h1>Chemical <br>Portfolio</h1>
+
+
+        </div>
+
+        <div class="bubbles">
+            <img src="img/bubble.png">
+            <img src="img/bubble.png">
+            <img src="img/bubble.png">
+            <img src="img/bubble.png">
+            <img src="img/bubble.png">
+            <img src="img/bubble.png">
+            <img src="img/bubble.png">
+        </div>
+        </div>
+
+        <h2 id="works">THE CREATORS</h2>
+        <section class="container">
+            <div class="card">
+               <div class="card-image man-1"></div>
+                   <h2>ANIKESH RUPCHANDANI</h2>
+                  <p id="p">Name: Anikesh Rupchandani<br> Roll no.19xxxxxx<br> Dept.: Chemical Engineering <br><span id="dots" >...</span><span id="more" style="display:none">vhhihyjihjihjkbg<br>hgftyyukvhfjgutgjhvgjyughbvyjghb</span></p>
+                  <a  href="/AnikeshRupchandani">Read More</a>
+
+
+        </div>
+        <div class="card">
+            <div class="card-image man-2"></div>
+                <h2>AYUSH TIWARI</h2>
+                <p id="p">In the wake of Uranium Mining at Nallamalla Forest, celebrities and citizens joined the "Save Nallamalla Forest" campaign. <span id="dot">...</span> <span id="mor" style="display:none">Of late, the campaign has gained momentum, with people from all walks of life, fighting for the cause. This was my part then, made my participation.</span></p>
+                <a  href="/UtkarshPratapSingh">Read More</a>
+
+     </div>
+     <div class="card">
+        <div class="card-image man-3"></div>
+            <h2>PRIYANSHI PARIDA</h2>
+            <p id="p">We need to burn calories daily, not tobacco. Stop smoking tobacco today!! Cigars don't really expire, but they can make you so.<span id="dots3" >...</span><span id="more3" style="display:none">A person's life with and without tobacco will make a huge impact. This was the poster made to create awareness among people to quit tobacco usage.</span></p>
+                <a  href="/PriyanshiParida">Read More</a>
+
+     </div>
+        <div class="card">
+          <div class="card-image man-4"></div>
+           <h2>UTKARSH PRATAP SINGH</h2>
+           <p id="p">NIT Raipur is a public technical and research universitry located in Raipur, India. It is founded in 1956 with two major engineering disciplines.<span id="dots4" >...</span><span id="more4" style="display:none">I joined the institute in the year 2019. It has very nice atmosphere. I thoroughly enjoyed my one year of off-line college.</span></p>
+                   <a  href="/UtkarshPratapSingh">Read More</a>
+
+
+
+</div>
+
+</div>
+<div class="card">
+  <div class="card-image man-5"></div>
+   <h2>VADDADI JAYA KUMAR</h2>
+   <p id="p">Name: Vddadi Jaya Kumar<br>Roll No.: 19113906<br>Department: Chemical Engineering<br><span id="dots5" >...</span><span id="more5" style="display:none">I am a native South Indian from a remote village Pydiwada, Visakhapatnam, Andhra Pradesh. I love coding, Web development and Travelling. </span></p>
+                  <a  href="/VaddadiJayaKumar">Read More</a>
+
+
+</div>
+<div class="card">
+  <div class="card-image man-6"></div>
+   <h2 id="Nameofperson"></h2>
+   <p id="aboutnewperson"><br><span id="dots6" >...</span><span id="more6" style="display:none"> </span></p>
+                   <button id="mybtn6" onclick="myfunction6()">Read More</button>
+
+
+</div>
+        </section>
+
+
+
+   <h2 id="newname"></h2>
+   <p id="newcontent"></p>
+
+  <div class="box">
+    <% for (let i=0; i<newListItems.length; i++) { %>
+      <div class="item">
+        <input type="text">
+        <p><%=  newListItems[i]  %></p>
+      </div>
+      <% } %>
+
+      <form class="item" action="/" method="post">
+        <input type="text" id="Name" name="newname" placeholder="Add Your Name" autocomplete="off">
+        <input type="text" id="Content" name="Content" placeholder="Add about Yourself" >
+        <button type="submit" onclick="myfunction()" name="list">Submit</button>
+      </form>
+  </div>
+  <script>
+    function myfunction() {
+      var x=document.getElementById("Name").value;
+      document.getElementById("Nameofperson").innerHTML=x;
+      var y=document.getElementById("Content").value;
+      document.getElementById("aboutnewperson").innerHTML=y;
+    }
+  </script>
+
+<%- include("footer") -%>
